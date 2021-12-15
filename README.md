@@ -35,5 +35,5 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
 ![Imagem do QRCode](./imagens/qrcode.png)
 
-Exemplo de notificação no WhatsApp:
+Exemplo de notificação no WhatsApp na vida real:
 ![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
