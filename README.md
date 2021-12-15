@@ -2,8 +2,15 @@
 
 ## Instituto de Informática
 
-**Disciplina**: Domínios de Software
-**Curso**: Engenharia de Software
+**Graduandos**: 
+<br/>
+201808801 - Arthur Castro da Cunha Lopes<br/>
+201808795 - Felipe Lagares<br/> 
+201802758 - Christopher Oliveira<br/> 
+201910890 - Joyce Beatriz Ferreira da Costa Silva<br/> 
+<br/> 
+**Disciplina**: Domínios de Software<br/>
+**Curso**: Engenharia de Software<br/>
 **Professor responsável**: Jacson Rodrigues Barbosa
 
 # Estudo de caso WPTrack
