@@ -27,16 +27,10 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 **_As empresas que prestam serviço_**: a recepcionista de cada loja será responsável por enviar o pedido de feedback para cada cliente.
 **_As empresas de transporte_**: será adicionado no processo de envio de notificações, o envio do pedido de feedback.
 
-#### Requisitos:
-
-1. Eu, como recepcionista, preciso entrar no sistema com meus dados de login, para poder começar a enviar os pedidos de feedback.
-2. Eu, como recepcionista, preciso registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue através do e-mail ou WhatsApp dele.
-3. Eu, como cliente, gostaria de clicar no link do pedido de feedback para registrar meu nível de satisfação com o serviço prestado pela empresa.
-
-#### Protótipos
+### Protótipos
 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
-![Imagem do QRCode](./imagens/qrcode.png)
+![Imagem do QRCode](./docs/imagens/qrcode.png)
 
 **Dashboard**:
 https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-Community?node-id=0%3A1
@@ -46,4 +40,4 @@ https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-C
 ##### LIFEBOX
 
 Exemplo de notificação no WhatsApp na vida real:
-![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
+![Imagem do WhatsApp com um exemplo real](./docs/imagens/lifebox.png)
