@@ -50,6 +50,11 @@ https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-C
 
 ### Inspiração:
 
+#### TRACK
+TRACK é uma empresa que possui diversos serviços e soluções em gestão de clientes e otimizações de pesquisas.
+
+https://track.co/
+
 ##### LIFEBOX
 
 Exemplo de notificação no WhatsApp na vida real:
