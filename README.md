@@ -7,7 +7,7 @@
 
 # Estudo de caso WPTrack
 
-####Problemática:
+#### Problemática:
 Muitas empresas não sabem, quantitativamente, o quão satisfeitos (ou insatisfeitos) seus clientes estão com a qualidade da prestação de serviço oferecida por seus colaboradores. Com isso em mente, vamos desenvolver uma aplicativo que facilite a obtenção de feedback dos clientes, proporcionando a interação empresa-cliente pelo e-mail e também através da rede social WhatsApp.
 
 Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos com um sistema **WPTrack**, como por exemplo:
@@ -15,7 +15,7 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 - As empresas vão ter, quantitativamente, conhecimento sobre a qualidade da sua prestação de serviços.
 - Os clientes terão a oportunidade de passar um feedback de maneira fácil e rápida.
 
-####Pessoas-chave:
+#### Pessoas-chave:
 
 - Paulo (Posê Beleza)
 - Recepcionista (caso de empresa que presta serviço)
@@ -31,9 +31,12 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 2. Eu, como recepcionista, preciso registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue através do e-mail ou WhatsApp dele.
 3. Eu, como cliente, gostaria de clicar no link do pedido de feedback para registrar meu nível de satisfação com o serviço prestado pela empresa.
 
-####Protótipos
+#### Protótipos
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
 ![Imagem do QRCode](./imagens/qrcode.png)
+
+**Dashboard**: 
+https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-Community?node-id=0%3A1
 
 Exemplo de notificação no WhatsApp na vida real:
 ![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
