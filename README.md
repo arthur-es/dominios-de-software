@@ -1,5 +1,6 @@
-**Universidade Federal de Goiás**
-**Instituto de Informática**
+# Universidade Federal de Goiás
+
+## Instituto de Informática
 
 **Disciplina**: Domínios de Software
 **Curso**: Engenharia de Software
@@ -7,7 +8,8 @@
 
 # Estudo de caso WPTrack
 
-#### Problemática:
+## Problemática:
+
 Muitas empresas não sabem, quantitativamente, o quão satisfeitos (ou insatisfeitos) seus clientes estão com a qualidade da prestação de serviço oferecida por seus colaboradores. Com isso em mente, vamos desenvolver uma aplicativo que facilite a obtenção de feedback dos clientes, proporcionando a interação empresa-cliente pelo e-mail e também através da rede social WhatsApp.
 
 Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos com um sistema **WPTrack**, como por exemplo:
@@ -36,10 +38,12 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
 ![Imagem do QRCode](./imagens/qrcode.png)
 
-
-
-**Dashboard**: 
+**Dashboard**:
 https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-Community?node-id=0%3A1
+
+### Inspiração:
+
+##### LIFEBOX
 
 Exemplo de notificação no WhatsApp na vida real:
 ![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
