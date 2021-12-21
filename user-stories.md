@@ -1,23 +1,31 @@
-Estórias de usuário
+##### Histórias de usuário
 
-US01. Como recepcionista, desejo entrar no sistema com meus dados de login, para poder começar a enviar os pedidos de feedback.
+US01. **Como** recepcionista, **desejo** entrar no sistema com meus dados de login, **para** poder começar a enviar os pedidos de feedback.
 
-US02. Como recepcionista, desejo registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue através do e-mail ou WhatsApp dele.
+US02. **Como** recepcionista, **desejo** registrar o nome e número de telefone com WhatsApp do cliente, **para** que o pedido de feedback seja entregue através do e-mail ou WhatsApp dele.
 
-US03. Como cliente, desejo clicar no link do pedido de feedback para registrar meu nível de satisfação com o serviço prestado pela empresa.
+US03. **Como** cliente, **desejo** clicar no link do pedido de feedback **para** registrar meu nível de satisfação com o serviço prestado pela empresa.
 
-US04. Como dono do negócio, desejo ter acesso a um dashboard para verificar o grau de satisfação dos clientes com determinados serviços.
+US04. **Como** dono do negócio, **desejo** ter acesso a um dashboard **para** verificar o grau de satisfação dos clientes com determinados serviços.
 
-US05. Como profissional, desejo ter acesso aos feedbacks escritos pelos clientes para melhorar a qualidade do meu serviço. 
+US05. **Como** profissional, **desejo** ter acesso aos feedbacks escritos pelos clientes **para** melhorar a qualidade do meu serviço. 
 
-US06. Como dono do negócio, desejo personalizar a mensagem de solicitação de feedback que será enviada ao cliente para aumentar a quantidade de respostas recebidas e dados coletados.
+US06. **Como** dono do negócio, **desejo** personalizar a mensagem de solicitação de feedback que será enviada ao cliente **para** aumentar a quantidade de respostas recebidas e dados coletados.
 
-US07. Como administrador, desejo configurar unidades da empresa para que possa haver uma classificação dos dados e facilidade de verificação de cada unidade.
+US07. **Como** administrador, **desejo** configurar unidades da empresa **para** que possa haver uma classificação dos dados e facilidade de verificação de cada unidade.
 
-US08. Como administrador, desejo configurar os serviços disponíveis para que ao receber uma avaliação o proprietário e os profissionais tenham facilidade em saber qual serviço específico está sendo avaliado
+US08. **Como** administrador, **desejo** configurar os serviços disponíveis **para** que ao receber uma avaliação o proprietário e os profissionais tenham facilidade em saber qual serviço específico está sendo avaliado
 
-US09. Como dono do negócio, desejo filtrar relatórios por unidade para que tenha uma visão clara de cada unidade do meu negócio.
+US09. **Como** dono do negócio, **desejo** filtrar relatórios por unidade **para** que tenha uma visão clara de cada unidade do meu negócio.
 
-US10. Como profissional, desejo filtrar relatórios por serviço para que haja facilidade ao identificar formas de melhorar meu serviço.
+US10. **Como** profissional, **desejo** filtrar relatórios por serviço **para** que haja facilidade ao identificar formas de melhorar meu serviço.
 
-US11. Como dono do negócio, desejo filtrar relatórios por período para que identifique facilmente quando o negócio teve melhor desempenho e reconheça as causas 
+US11. **Como** dono do negócio, **desejo** filtrar relatórios por período **para** que identifique facilmente quando o negócio teve melhor desempenho e reconheça as causas 
+
+##### REQUISITOS NÃO FUNCIONAIS RNF 
+
+RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet. 
+
+RNF02. O sistema será desenvolvido com o uso de Javascript, HTML e CSS através do Framework NEXT.JS para fins de portabilidade entre diferentes navegadores, como o Google Chrome e Microsoft Edge. 
+
+RNF03. O sistema será desenvolvido com o uso do Firebase para facilitar a parte de criação do sistema de cadastro/login. Além disso, permitirá de maneira rápida construirmos o MVP da aplicação com uso de dados em tempo real.
