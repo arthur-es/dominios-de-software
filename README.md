@@ -92,6 +92,16 @@ Exemplo de notificação no WhatsApp na vida real:
 - Cliente: gravação da tela do app e telemetria
 - Recepcionistas: entrevista online ou presencial, gravação da tela do app e telemetria
 
-# REQUISITOS FUNCIONAIS e NÃO FUNCIONAIS:
+# REQUISITOS FUNCIONAIS:
 
 Estamos trabalhando com uma metodologia mais ágil e decidimos escrever os requisitos em formatos de [histórias de usuário](./user-stories.md "Histórias de usuário").
+
+
+# Requisitos não funcionais RNF 
+
+RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet. 
+
+RNF02. O sistema será desenvolvido com o uso de Javascript, HTML e CSS através do Framework NEXT.JS para fins de portabilidade entre diferentes navegadores, como o Google Chrome e Microsoft Edge. 
+
+RNF03. O sistema será desenvolvido com o uso do Firebase para facilitar a parte de criação do sistema de cadastro/login. Além disso, permitirá de maneira rápida construirmos o MVP da aplicação com uso de dados em tempo real.
+
