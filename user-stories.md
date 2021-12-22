@@ -22,7 +22,7 @@ US10. **Como** profissional, **desejo** filtrar relatórios por serviço **para*
 
 US11. **Como** dono do negócio, **desejo** filtrar relatórios por período **para** que identifique facilmente quando o negócio teve melhor desempenho e reconheça as causas 
 
-##### REQUISITOS NÃO FUNCIONAIS RNF 
+##### Requisitos não funcionais RNF 
 
 RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet. 
 
