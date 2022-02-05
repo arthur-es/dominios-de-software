@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-const PrismaInstance = (function () {
+export const PrismaInstance = (function () {
   let instance: PrismaClient;
 
   function createInstance(): PrismaClient {
@@ -12,7 +12,7 @@ const PrismaInstance = (function () {
   }
 
   return {
-    getInstance: async function () {
+    getInstance: function () {
       if (!instance) {
         console.log("🆕 Criando nova instância do prisma...");
         instance = createInstance();
@@ -23,5 +23,3 @@ const PrismaInstance = (function () {
     },
   };
 })();
-
-export default PrismaInstance;
