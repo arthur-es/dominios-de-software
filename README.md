@@ -43,7 +43,7 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 #### Protótipos
 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
-![Imagem do QRCode](./imagens/qrcode.png)
+![Imagem do QRCode](./public/imagens/qrcode.png)
 
 **Dashboard**:
 https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-Community?node-id=0%3A1
@@ -59,7 +59,7 @@ https://track.co/
 ##### LIFEBOX
 
 Exemplo de notificação no WhatsApp na vida real:
-![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
+![Imagem do WhatsApp com um exemplo real](./public/imagens/lifebox.png)
 
 ## Coleta e Escrita de Requisitos
 
@@ -96,12 +96,10 @@ Exemplo de notificação no WhatsApp na vida real:
 
 Estamos trabalhando com uma metodologia mais ágil e decidimos escrever os requisitos em formatos de [histórias de usuário](./user-stories.md "Histórias de usuário").
 
+# Requisitos não funcionais RNF
 
-# Requisitos não funcionais RNF 
+RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet.
 
-RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet. 
-
-RNF02. O sistema será desenvolvido com o uso de Javascript, HTML e CSS através do Framework NEXT.JS para fins de portabilidade entre diferentes navegadores, como o Google Chrome e Microsoft Edge. 
+RNF02. O sistema será desenvolvido com o uso de Javascript, HTML e CSS através do Framework NEXT.JS para fins de portabilidade entre diferentes navegadores, como o Google Chrome e Microsoft Edge.
 
 RNF03. O sistema será desenvolvido com o uso do Firebase para facilitar a parte de criação do sistema de cadastro/login. Além disso, permitirá de maneira rápida construirmos o MVP da aplicação com uso de dados em tempo real.
-
