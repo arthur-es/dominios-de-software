@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  whatsapp   String   @unique
+  name    String
+  services Service[]
+  attendants Attendant[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id      Int      @id @default(autoincrement())
+  name    String
+  company   Company @relation(fields: [companyId], references: [id])
+  companyId  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Attendant {
+  id      Int      @id @default(autoincrement())
+  name    String
+  company   Company @relation(fields: [companyId], references: [id])
+  companyId  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum FeedbackStatus {
+  REQUESTED
+  RECEIVED
+  INVALID
+  REQUEST_EXPIRED
+}
+
+model Feedback {
+  id        Int      @id @default(autoincrement())
+  score     Int
+  content   String?
+  client   Client @relation(fields: [clientId], references: [id])
+  clientId  Int
+  status    FeedbackStatus @default(REQUESTED)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Client {
+  id      Int      @id @default(autoincrement())
+  name    String
+  whatsapp String @unique
+  feedbacks Feedback[] 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
