@@ -12,18 +12,18 @@ type Data = {
 const prisma = PrismaInstance.getInstance();
 
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const { email, logoUrl, name, whatsapp } = req.body;
+  const { email, logoUrl, name, whatsapp, slug } = req.body;
 
   try {
-    const companyEmailAlreadyExists = await prisma.company.findFirst({
-      where: { email },
+    const companySlugAlreadyTaken = await prisma.company.findFirst({
+      where: { slug },
     });
 
-    if (companyEmailAlreadyExists) {
-      console.log(companyEmailAlreadyExists);
+    if (companySlugAlreadyTaken) {
+      console.log(companySlugAlreadyTaken);
 
       return res.status(400).json({
-        message: `Company ${companyEmailAlreadyExists.name} has already taken the email ${email}! Try again with a different email.`,
+        message: `Company ${companySlugAlreadyTaken.slug} has already taken the slug ${slug}! Try again with a different slug.`,
       });
     }
 
@@ -33,6 +33,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
         logoUrl,
         name,
         whatsapp,
+        slug,
       },
     });
 

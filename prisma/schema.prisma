@@ -12,8 +12,9 @@ datasource db {
 
 model Company {
   id      Int      @id @default(autoincrement())
-  email   String   @unique
-  whatsapp   String   @unique
+  slug    String   @unique
+  email   String
+  whatsapp   String
   logoUrl String
   name    String
   services Service[]
