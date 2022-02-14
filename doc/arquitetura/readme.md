@@ -24,10 +24,16 @@ TECNOLOGIAS
 #### 2.2 Atributos de Qualidades Prioritários
 
 ### 3. Representação da Arquitetura
-Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do tipo Serverless onde constarão alguns microsserviços. Os tópicos a seguuir detalham os pontos de vista arquiteturais.
+Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do tipo Serverless onde constarão alguns microsserviços. Os tópicos a seguir detalham os pontos de vista arquiteturais.
 ### 4. Ponto de vista do Projetista
-#### 4.1 Descrição
-#### 4.2 Visão de Casos de Uso
+#### 4.1 Visão Geral
+O modelo arquitetural proposto para a construção deste software será
+composto por 4 componentes essenciais: frontend, backend serverless, supabase e sackflow
+#### 4.2 Visão de Componentes
+A interação entre os componentes citados neste tópico pode ser
+visualizada por meio do Diagrama de componentes UML abaixo:
+![diagrama de componentes](./public/imagens/diagramaDeComponentes.png)
+#### 4.3 Detalhamento das camadas
 
 ### 5. Ponto de vista do Desenvolvedor
 #### 5.1 Visão Geral
