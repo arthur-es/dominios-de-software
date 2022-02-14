@@ -24,7 +24,7 @@ TECNOLOGIAS
 #### 2.2 Atributos de Qualidades Prioritários
 
 ### 3. Representação da Arquitetura
-
+Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do tipo Serverless onde constarão alguns microsserviços. Os tópicos a seguuir detalham os pontos de vista arquiteturais.
 ### 4. Ponto de vista do Projetista
 #### 4.1 Descrição
 #### 4.2 Visão de Casos de Uso
