@@ -32,7 +32,7 @@ composto por 4 componentes essenciais: frontend, backend serverless, supabase e 
 #### 4.2 Visão de Componentes
 A interação entre os componentes citados neste tópico pode ser
 visualizada por meio do Diagrama de componentes UML abaixo:
-![diagrama de componentes](./public/imagens/diagramaDeComponentes.png)
+![diagrama de componentes](https://github.com/arthur-es/dominios-de-software/blob/main/public/imagens/diagramaDeComponentes.png)
 #### 4.3 Detalhamento das camadas
 
 ### 5. Ponto de vista do Desenvolvedor
