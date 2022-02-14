@@ -4,7 +4,10 @@ versão 1.0
 
 ### 1. Introdução 
 #### 1.1 Finalidade
+Este documento possui como objetivo definir os aspectos da Arquitetura
+do software WPTrack. Utiliza de diferentes pontos de vista para de desenvolvimento para descrever diferentes aspectos do sistema. Tem finalidade de capturar e transmitir as decisões arquiteturais significativas que foram feitas no sistema.
 #### 1.2 Escopo
+Este documento é gerado a partir do levantamento de [requisitos](https://github.com/arthur-es/dominios-de-software/blob/main/README.md) feito para o WPTrack que tem por finalidade auxliar o levantamento de dados e avaliação de serviços prestados por profissionais. As seções foram extraidas do modelo de documento de arquitetura de software.
 #### 1.3 Definições, Acrônimos e Abreviações
 
 #### 1.4 Referências
