@@ -11,27 +11,35 @@ import { Container, Spinner } from "./styles";
 interface IData {
   username: string;
   password: string;
+  name: string;
 }
 
 const LoginForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
+  const { setCurrentUser, setStatus } = useUser();
+
   const validationSchema = yup.object().shape({
+    name: yup.string().required("Entre com um nome"),
     username: yup
       .string()
       .required("Entre com um usuário")
       .email("Entre com um e-mail válido"),
     password: yup.string().required("Entre com uma senha"),
+    passwordConfirm: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "Senhas não conferem")
+      .required("Confirme a senha"),
   });
-
-  const { setCurrentUser, setStatus } = useUser();
 
   const onSubmit = async (data: IData) => {
     try {
       setLoading(true);
-      const { data: response } = await axios.post("/api/auth/login", {
+
+      const { data: response } = await axios.post("/api/user/create", {
         email: data.username,
         password: data.password,
+        name: data.name,
       });
 
       setCurrentUser(response);
@@ -49,22 +57,28 @@ const LoginForm: React.FC = () => {
     <Container>
       <img src="wptrack.svg" />
       <Formik
-        initialValues={{ username: "", password: "" }}
+        initialValues={{
+          username: "",
+          password: "",
+          passwordConfirm: "",
+          name: "",
+        }}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
         <Form>
+          <Field name="name" placeholder="Nome" />
+          <ErrorMessage name="name" component="span" />
           <Field name="username" placeholder="E-mail" type="email" />
           <ErrorMessage name="username" component="span" />
           <Field name="password" type="password" placeholder="Senha" />
           <ErrorMessage name="password" component="span" />
-          <button type="submit">{loading ? <Spinner /> : "Entrar"}</button>
-          <Link href="/" passHref>
-            <a className="password-recover">Esqueceu a senha?</a>
-          </Link>
+          <Field name="passwordConfirm" type="password" placeholder="Senha" />
+          <ErrorMessage name="passwordConfirm" component="span" />
+          <button type="submit">{loading ? <Spinner /> : "Criar conta"}</button>
           <hr />
-          <Link href="/registro" passHref>
-            <a className="register">Criar nova conta</a>
+          <Link href="/login" passHref>
+            <a className="register">Já possuo conta</a>
           </Link>
         </Form>
       </Formik>
