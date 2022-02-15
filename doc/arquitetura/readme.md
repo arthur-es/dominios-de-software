@@ -27,16 +27,30 @@ LIVROS
 * SOMMERVILLE, Ian. Engenharia de Software 8. ed. Tradução Selma Shin Melnikoff; Reginaldo Arakaki; Edilson de Andrade Barbosa. São Paulo: Persson, 2007.
 
 #### 1.5 Visão Geral
-
+A seguir serão definidos os requisitos usados para definir a arquitetura utilizada e quais atributos de qualidade serão priorizados.Quais os padrões arquiteturais serão utilizados conforme os atributos de qualidade selecionados.
+Quais e como as visões arquiteturais serão detalhadas e quais os pontos de vista da arquitetura serão utilizados para descrever as visões.
 
 ### 2. Contexto da Arquitetura 
 
 #### 2.1 Funcionalidades e Restrições Arquiteturais
+|---id---|------------tipo--------------|id do documento de requisitos do WPTrack|
 
+| RAS_1  | Requisitos Não-Funcionais  |                RNF01                   |
 
+| RAS_2  | Requisitos Não-Funcionais  |                RNF02                   |
 
+| RAS_3  | Requisitos Não-Funcionais  |                RNF03                   |
+
+| RAS_4  |    Requisitos de dados     |  Todos  |
+
+Os requisitos acima mencionados guiarão toda a arquitetura do sistema.
+
+RAS_2 e RAS_3 estipulam ferramentas que deverão ser usadas no desenvolvimento do sistema para fins de portabilidade e agilidade de entrega.
+
+RAS_1 informa que o contexto da aplicação é WEB, no entanto, o uso das ferramentas de RAS_2 nos leva a adotar a arquitetura __serverless__ enquanto RAS_4 indica um hibridismo com __microsserviços__ além das funcionalidades que deverão estar disponiveis na aplicação.
 
 #### 2.2 Atributos de Qualidades Prioritários
+Os atributos de qualidade priorizados pelo uso dessas ferramentas são a __portabilidade__ fornecida pelas ferramentas especificadas de RAS_2 e __produtividade__ decorrente do auto scaling da arquitetura serverless.
 
 ### 3. Representação da Arquitetura
 Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do tipo Serverless onde constarão alguns microsserviços. Os tópicos a seguir detalham os pontos de vista arquiteturais.
@@ -44,16 +58,19 @@ Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do 
 
 ### 4. Ponto de vista do Projetista
 #### 4.1 Visão Geral
-O modelo arquitetural proposto para a construção deste software será
-composto por 4 componentes essenciais: frontend, backend serverless, supabase e sackflow.
+O modelo arquitetural proposto para a construção deste software será composto por 4 componentes essenciais: frontend, backend serverless, supabase e sackflow.
 
 #### 4.2 Visão de Componentes
-O componente Front-end é responsavel pela interação com o usuário e se comunica com o Back-end serverless
-O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes
-O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos do back-end tanto de gestão de usuários quanto de estatisticas
-O componente Sacflow.io é responsável por enviar mensagens recebidas do back-end para o whatsapp do cliente via API
-A interação entre os componentes citados neste tópico pode ser
-visualizada por meio do Diagrama de componentes UML abaixo:
+O componente Front-end é responsavel pela interação com o usuário e se comunica com o Back-end serverless.
+
+O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes.
+
+O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos do back-end tanto de gestão de usuários quanto de estatisticas.
+
+O componente Sacflow.io é responsável por enviar mensagens recebidas do back-end para o whatsapp do cliente via API.
+
+A interação entre os componentes citados neste tópico pode ser visualizada por meio do Diagrama de componentes UML abaixo:
+
 ![diagrama de componentes](https://github.com/arthur-es/dominios-de-software/blob/main/public/imagens/diagramaDeComponentes.png)
 
 ### 5. Ponto de vista do Desenvolvedor
