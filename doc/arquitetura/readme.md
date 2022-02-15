@@ -33,14 +33,11 @@ Quais e como as visões arquiteturais serão detalhadas e quais os pontos de vis
 ### 2. Contexto da Arquitetura 
 
 #### 2.1 Funcionalidades e Restrições Arquiteturais
-|---id---|------------tipo--------------|id do documento de requisitos do WPTrack|
-
-| RAS_1  | Requisitos Não-Funcionais  |                RNF01                   |
-
+|id|tipo|id do documento de requisitos do WPTrack|
+| -- |--|--|
+| RAS_1  | Requisitos Não-Funcionais  |                RNF01                  |
 | RAS_2  | Requisitos Não-Funcionais  |                RNF02                   |
-
 | RAS_3  | Requisitos Não-Funcionais  |                RNF03                   |
-
 | RAS_4  |    Requisitos de dados     |  Todos  |
 
 Os requisitos acima mencionados guiarão toda a arquitetura do sistema.
