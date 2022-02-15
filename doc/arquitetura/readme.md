@@ -48,12 +48,13 @@ O modelo arquitetural proposto para a construção deste software será
 composto por 4 componentes essenciais: frontend, backend serverless, supabase e sackflow.
 
 #### 4.2 Visão de Componentes
+O componente Front-end é responsavel pela interação com o usuário e se comunica com o Back-end serverless
+O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes
+O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos do back-end tanto de gestão de usuários quanto de estatisticas
+O componente Sacflow.io é responsável por enviar mensagens recebidas do back-end para o whatsapp do cliente via API
 A interação entre os componentes citados neste tópico pode ser
 visualizada por meio do Diagrama de componentes UML abaixo:
 ![diagrama de componentes](https://github.com/arthur-es/dominios-de-software/blob/main/public/imagens/diagramaDeComponentes.png)
-
-#### 4.3 Detalhamento das camadas
-
 
 ### 5. Ponto de vista do Desenvolvedor
 #### 5.1 Visão Geral
