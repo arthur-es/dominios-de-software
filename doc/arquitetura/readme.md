@@ -60,7 +60,7 @@ O modelo arquitetural proposto para a construção deste software será composto
 #### 4.2 Visão de Componentes
 O componente Front-end é responsavel pela interação com o usuário e se comunica com o Back-end serverless.
 
-O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes.
+O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes. Recebe os dados que os usuarios passam a partir da interação com o front-end, faz o processamento dos dados do supabase e exibe no em dashboards no front-end, repassa as mensagens que os funcionarios informaram atraves do front-end para o sacflow.io enviar para os clientes, após o feedback envia as novas informações para o subase.   
 
 O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos do back-end tanto de gestão de usuários quanto de estatisticas.
 
