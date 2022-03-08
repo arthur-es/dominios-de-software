@@ -58,13 +58,13 @@ Como dito anteriormente o software a ser desenvolvido possui uma arquitetura do 
 O modelo arquitetural proposto para a construção deste software será composto por 4 componentes essenciais: frontend, backend serverless, supabase e sackflow.
 
 #### 4.2 Visão de Componentes
-O componente Front-end é responsavel pela interação com o usuário e se comunica com o Back-end serverless.
+O componente Frontend é responsavel pela interação com o usuário e se comunica com o Backend serverless.
 
-O componente Back-end serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes. Recebe os dados que os usuarios passam a partir da interação com o front-end, faz o processamento dos dados do supabase e exibe no em dashboards no front-end, repassa as mensagens que os funcionarios informaram atraves do front-end para o sacflow.io enviar para os clientes, após o feedback envia as novas informações para o subase.   
+O componente Backend serverless é o que compõe a lógica do software e o processamento dos dados, se relaciona com o todos os demais componentes.    
 
-O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos do back-end tanto de gestão de usuários quanto de estatisticas.
+O componente Supabase é o banco de dados do sistema que faz a permanencia dos dados recebidos através do backend tanto de gestão de usuários quanto de estatisticas.
 
-O componente Sacflow.io é responsável por enviar mensagens recebidas do back-end para o whatsapp do cliente via API.
+O componente Sacflow.io é responsável por enviar mensagens recebidas através do backend para o whatsapp do cliente via API.
 
 A interação entre os componentes citados neste tópico pode ser visualizada por meio do Diagrama de componentes UML abaixo:
 
@@ -72,7 +72,8 @@ A interação entre os componentes citados neste tópico pode ser visualizada po
 
 ### 5. Ponto de vista do Desenvolvedor
 #### 5.1 Visão Geral
-#### 5.2 Visão lógica
-#### 5.3 Detalhamento das classes
-#### 5.4 Visão de segurança
-#### 5.5 Detalhamento de segurança
+O ponto de vista do desenvolvedor é direcionado aos projetistas e
+desenvolvedores do software e tem como objetivo definir as principais partes responsáveis por definir as funcionalidades e restrições do software, neste caso, os componentes.
+#### 5.2 Detalhamento dos componentes
+Conforme descrito anteriormente (__4.2__) o backend serverless é responsável por diversas funções e grande parte das funcionalidades propostas como uma ponte entre os demais componentes a partir são gerados os dashboards de estatisticas de feedback a serem exibidos no frontend, ele é responsável pelo envio da mensagem do funcionario usuário do frontend para o cliente através do sacflow. Além disso, após o retorno do cliente é responsável por enviar os dados para armazenamento no supabase e atualização do frontend.    
+
