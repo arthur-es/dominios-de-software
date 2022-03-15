@@ -19,9 +19,9 @@ const LoginForm: React.FC = () => {
   const validationSchema = yup.object().shape({
     username: yup
       .string()
-      .required("Entre com um usuário")
-      .email("Entre com um e-mail válido"),
-    password: yup.string().required("Entre com uma senha"),
+      .required("Entre com um usuário.")
+      .email("Entre com um e-mail válido."),
+    password: yup.string().required("Entre com uma senha."),
   });
 
   const { setCurrentUser, setStatus } = useUser();
