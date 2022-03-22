@@ -44,6 +44,11 @@ const RegisterForm: React.FC = () => {
         name: data.name,
       });
 
+      toast("Usuário registrado com sucesso!", {
+        progressClassName: "progress-confirmation",
+        className: "toaster-confirmation",
+      });
+
       setCurrentUser(response);
       setStatus(STATUS.CONNECTED);
     } catch (err: any) {
