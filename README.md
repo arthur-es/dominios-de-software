@@ -2,13 +2,13 @@
 
 ## Instituto de Informática
 
-**Graduandos**: 
+**Graduandos**:
 <br/>
 201808801 - Arthur Castro da Cunha Lopes<br/>
-201808795 - Felipe Lagares<br/> 
-201802758 - Christopher Oliveira<br/> 
-201910890 - Joyce Beatriz Ferreira da Costa Silva<br/> 
-<br/> 
+201808795 - Felipe Lagares<br/>
+201802758 - Christopher Oliveira<br/>
+201910890 - Joyce Beatriz Ferreira da Costa Silva<br/>
+<br/>
 **Disciplina**: Domínios de Software<br/>
 **Curso**: Engenharia de Software<br/>
 **Professor responsável**: Jacson Rodrigues Barbosa
@@ -43,7 +43,7 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 #### Protótipos
 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
-![Imagem do QRCode](./imagens/qrcode.png)
+![Imagem do QRCode](./public/imagens/qrcode.png)
 
 **Dashboard**:
 https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-Community?node-id=0%3A1
@@ -51,6 +51,7 @@ https://www.figma.com/file/T4bgnuf9p3DAkKsViWf2WC/Figma-Admin-Dashboard-UI-Kit-C
 ### Inspiração:
 
 #### TRACK
+
 TRACK é uma empresa que possui diversos serviços e soluções em gestão de clientes e otimizações de pesquisas.
 
 https://track.co/
@@ -58,4 +59,47 @@ https://track.co/
 ##### LIFEBOX
 
 Exemplo de notificação no WhatsApp na vida real:
-![Imagem do WhatsApp com um exemplo real](./imagens/lifebox.png)
+![Imagem do WhatsApp com um exemplo real](./public/imagens/lifebox.png)
+
+## Coleta e Escrita de Requisitos
+
+#### NECESSIDADES GERAIS
+
+| DESCRIÇÃO                                                                                                        | FONTE                                                    |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Obter feedback dos clientes sobre a sua prestação de serviços                                                    | Empresa da área de beleza e estética                     |
+| Enviar pedido de feedback através do web app                                                                     | Recepcionista                                            |
+| Fornecer feedback sobre a sua experiência com a empresa                                                          | Cliente                                                  |
+| Personalizar mensagem que é enviada para o cliente solicitando o feedback por canal. Exemplo: e-mail e WhatsApp. | Empresa da área de beleza e estética                     |
+| Configurar as unidades da empresa                                                                                | Administrador da conta da empresa na plataforma WP Track |
+| Configurar os recepcionistas de cada unidade (pessoas que vão solicitar o feedback para o cliente)               | Administrador da conta da empresa na plataforma WP Track |
+| Configurar os serviços prestados                                                                                 | Administrador da conta da empresa na plataforma WP Track |
+| Filtrar relatório por unidade                                                                                    | Empresa da área de beleza e estética                     |
+| Filtrar relatório por serviço                                                                                    | Empresa da área de beleza e estética                     |
+| Filtrar relatório por período                                                                                    | Empresa da área de beleza e estética                     |
+
+### ENTIDADES ENVOLVIDAS
+
+- Dono do negócio de prestação de serviços
+- Cliente
+- Recepcionistas
+- Profissionais da área da beleza (Cabeleireiro, manicure...)
+- Administrador
+
+### MECANISMOS DE COLETA DE REQUISITOS ENVOLVIDOS
+
+- Dono do negócio de prestação de serviços: entrevista online através do Meet.
+- Cliente: gravação da tela do app e telemetria
+- Recepcionistas: entrevista online ou presencial, gravação da tela do app e telemetria
+
+# REQUISITOS FUNCIONAIS:
+
+Estamos trabalhando com uma metodologia mais ágil e decidimos escrever os requisitos em formatos de [histórias de usuário](./user-stories.md "Histórias de usuário").
+
+# Requisitos não funcionais RNF
+
+RNF01. O sistema será desenvolvido na plataforma Web para que as informações estejam acessíveis a qualquer momento por meio de um navegador e acesso à Internet.
+
+RNF02. O sistema será desenvolvido com o uso de Javascript, HTML e CSS através do Framework NEXT.JS para fins de portabilidade entre diferentes navegadores, como o Google Chrome e Microsoft Edge.
+
+RNF03. O sistema será desenvolvido com o uso do Firebase para facilitar a parte de criação do sistema de cadastro/login. Além disso, permitirá de maneira rápida construirmos o MVP da aplicação com uso de dados em tempo real.
