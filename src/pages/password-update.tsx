@@ -1,4 +1,4 @@
-import RegisterForm from "@/components/Pages/Registro/Form";
+import PasswordUpdateForm from "@/components/Pages/PasswordUpdate/Form";
 import { PageWrapper, PageContainer } from "@/styles/Pages/login";
 import { NextPage } from "next";
 
@@ -6,7 +6,7 @@ const LoginPage: NextPage = () => {
   return (
     <PageWrapper>
       <PageContainer>
-        <RegisterForm />
+        <PasswordUpdateForm />
       </PageContainer>
     </PageWrapper>
   );
