@@ -7,6 +7,8 @@ import * as yup from "yup";
 import { useUser, STATUS } from "@/components/Global/Providers/user";
 
 import { Container, Spinner } from "./styles";
+import { toast } from "react-toastify";
+import { mapError } from "@/utils/mapError";
 
 interface IData {
   username: string;
@@ -14,7 +16,7 @@ interface IData {
   name: string;
 }
 
-const LoginForm: React.FC = () => {
+const RegisterForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   const { setCurrentUser, setStatus } = useUser();
@@ -45,8 +47,11 @@ const LoginForm: React.FC = () => {
       setCurrentUser(response);
       setStatus(STATUS.CONNECTED);
     } catch (err: any) {
-      console.log(err.response);
       setCurrentUser(null);
+      toast(mapError(err.response.data.message), {
+        progressClassName: "progress-error",
+        className: "toaster-error",
+      });
       setStatus(STATUS.DISCONNECTED);
     } finally {
       setLoading(false);
@@ -86,4 +91,4 @@ const LoginForm: React.FC = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

@@ -1,10 +1,8 @@
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-
-import { useUser, STATUS } from "@/components/Global/Providers/user";
 
 import { Container, Spinner } from "./styles";
 import { toast } from "react-toastify";
@@ -15,42 +13,43 @@ interface IData {
   password: string;
 }
 
-const LoginForm: React.FC = () => {
+const PasswordRecoverForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  const token = router.asPath?.includes("token=")
+    ? router.asPath.split("token=")[1]
+    : "";
 
   const validationSchema = yup.object().shape({
-    username: yup
+    password: yup.string().required("Entre com uma senha"),
+    passwordConfirm: yup
       .string()
-      .required("Entre com um usuário.")
-      .email("Entre com um e-mail válido."),
-    password: yup.string().required("Entre com uma senha."),
+      .oneOf([yup.ref("password"), null], "Senhas não conferem")
+      .required("Confirme a senha"),
   });
-
-  const { setCurrentUser, setStatus } = useUser();
 
   const onSubmit = async (data: IData) => {
     try {
       setLoading(true);
-      const { data: response } = await axios.post("/api/auth/login", {
-        email: data.username,
+      await axios.post("/api/auth/update-password", {
+        accessToken: token,
         password: data.password,
       });
 
-      toast("Usuário logado!", {
+      toast("Senha atualizada com sucesso", {
         progressClassName: "progress-confirmation",
         className: "toaster-confirmation",
       });
 
-      setCurrentUser(response);
-      setStatus(STATUS.CONNECTED);
+      router.push("/login");
     } catch (err: any) {
-      setCurrentUser(null);
+      console.log(err);
+
       toast(mapError(err.response.data.message), {
         progressClassName: "progress-error",
         className: "toaster-error",
       });
-      setCurrentUser(null);
-      setStatus(STATUS.DISCONNECTED);
     } finally {
       setLoading(false);
     }
@@ -59,28 +58,27 @@ const LoginForm: React.FC = () => {
   return (
     <Container>
       <img src="wptrack.svg" />
+      <h2>Recuperar senha</h2>
       <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
         <Form>
-          <Field name="username" placeholder="E-mail" type="email" />
-          <ErrorMessage name="username" component="span" />
           <Field name="password" type="password" placeholder="Senha" />
           <ErrorMessage name="password" component="span" />
-          <button type="submit">{loading ? <Spinner /> : "Entrar"}</button>
-          <Link href="/password-recover" passHref>
-            <a className="password-recover">Esqueceu a senha?</a>
-          </Link>
-          <hr />
-          <Link href="/registro" passHref>
-            <a className="register">Criar nova conta</a>
-          </Link>
+          <Field
+            name="passwordConfirm"
+            type="password"
+            placeholder="Confirme a senha"
+          />
+          <ErrorMessage name="passwordConfirm" component="span" />
+
+          <button type="submit">{loading ? <Spinner /> : "Enviar"}</button>
         </Form>
       </Formik>
     </Container>
   );
 };
 
-export default LoginForm;
+export default PasswordRecoverForm;

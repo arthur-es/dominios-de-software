@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
+import type { AppProps } from "next/app";
 
 import UserProvider from "@/components/Global/Providers/user";
 import Routes from "@/components/Global/Routes";
 import GlobalStyles from "@/styles/GlobalStyles";
-import type { AppProps } from "next/app";
+import { Toast } from "@/utils/Toaster";
+
+import "react-toastify/dist/ReactToastify.min.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -11,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
       <GlobalStyles />
+      <Toast />
 
       {/* <Routes
         authenticated={

@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Link from "next/link";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-
-import { useUser, STATUS } from "@/components/Global/Providers/user";
 
 import { Container, Spinner } from "./styles";
 import { toast } from "react-toastify";
@@ -15,42 +12,33 @@ interface IData {
   password: string;
 }
 
-const LoginForm: React.FC = () => {
+const PasswordUpdateForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   const validationSchema = yup.object().shape({
     username: yup
       .string()
-      .required("Entre com um usuário.")
-      .email("Entre com um e-mail válido."),
-    password: yup.string().required("Entre com uma senha."),
+      .required("Entre com um usuário")
+      .email("Entre com um e-mail válido"),
   });
-
-  const { setCurrentUser, setStatus } = useUser();
 
   const onSubmit = async (data: IData) => {
     try {
       setLoading(true);
-      const { data: response } = await axios.post("/api/auth/login", {
+      await axios.post("/api/auth/recover-password", {
         email: data.username,
-        password: data.password,
       });
-
-      toast("Usuário logado!", {
+      toast("Um e-mail para recuperação foi enviado para você!", {
         progressClassName: "progress-confirmation",
         className: "toaster-confirmation",
       });
-
-      setCurrentUser(response);
-      setStatus(STATUS.CONNECTED);
     } catch (err: any) {
-      setCurrentUser(null);
+      console.log(err);
+
       toast(mapError(err.response.data.message), {
         progressClassName: "progress-error",
         className: "toaster-error",
       });
-      setCurrentUser(null);
-      setStatus(STATUS.DISCONNECTED);
     } finally {
       setLoading(false);
     }
@@ -59,6 +47,7 @@ const LoginForm: React.FC = () => {
   return (
     <Container>
       <img src="wptrack.svg" />
+      <h2>Recuperar senha</h2>
       <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={onSubmit}
@@ -67,20 +56,12 @@ const LoginForm: React.FC = () => {
         <Form>
           <Field name="username" placeholder="E-mail" type="email" />
           <ErrorMessage name="username" component="span" />
-          <Field name="password" type="password" placeholder="Senha" />
-          <ErrorMessage name="password" component="span" />
-          <button type="submit">{loading ? <Spinner /> : "Entrar"}</button>
-          <Link href="/password-recover" passHref>
-            <a className="password-recover">Esqueceu a senha?</a>
-          </Link>
-          <hr />
-          <Link href="/registro" passHref>
-            <a className="register">Criar nova conta</a>
-          </Link>
+
+          <button type="submit">{loading ? <Spinner /> : "Enviar"}</button>
         </Form>
       </Formik>
     </Container>
   );
 };
 
-export default LoginForm;
+export default PasswordUpdateForm;
