@@ -21,13 +21,13 @@ const Home: NextPage = () => {
         <title>WP Track</title>
         <meta
           name="description"
-          content="Receber feedback de um serviço no WhatsApp nunca foi tão fácil!"
+          content="Receber feedback de um serviço no WhatsApp ou e-mail nunca foi tão fácil!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1>Welcome to WP Track!</h1>
+        <h1>Seja bem-vindo ao WP Track</h1>
       </main>
     </div>
   );
