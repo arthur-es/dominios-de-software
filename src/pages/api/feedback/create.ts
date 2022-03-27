@@ -4,48 +4,47 @@ import { validate } from "../../../backend/middleware/validade";
 import { newFeedback } from "../../../backend/schemas/feedback";
 
 import { PrismaInstance } from "../../../backend/database";
-// import { SupabaseInstance } from "../../../backend/database";
-
-// const supabase = SupabaseInstance.getInstance();
-
-const prisma = PrismaInstance.getInstance();
+import { sendWhatsAppText } from "@/backend/utils/sendWhatsAppMessage";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { whatsapp, name, service, email } = req.body;
+  const { whatsapp, name, service, companyId } = req.body;
 
-  if (!whatsapp && !email) {
-    return res
-      .status(400)
-      .json({ message: "E-mail or WhatsApp must be suplied!" });
+  try {
+    const prisma = PrismaInstance.getInstance();
+
+    const foundCompany = await prisma.company.findUnique({
+      where: { id: companyId },
+    });
+
+    if (!foundCompany) {
+      return res
+        .status(400)
+        .json({ message: `Empresa com o ${companyId} não existe!` });
+    }
+
+    let { id: feedbackId } = await prisma.feedback.create({
+      data: {
+        score: 0,
+        name,
+        whatsapp,
+        status: "REQUESTED",
+        companyId: foundCompany.id,
+      },
+    });
+
+    const FEEDBACK_WHATSAPP_MESSAGE = `*${foundCompany.name}*: Olá ${name}, tudo bem?\n\nGostariamos do seu feedback sobre o serviço *${service}*!\n\n\nConta o que achou *clicando nesse link* 👇\nhttps://wptrack.vercel.app/feedback/${feedbackId}`;
+
+    await sendWhatsAppText({
+      message: FEEDBACK_WHATSAPP_MESSAGE,
+      phone: whatsapp,
+    });
+
+    return res.json({ message: `Pedido de feedback enviado para ${name}!` });
+  } catch (err: any) {
+    return res.status(500).json({
+      message: `Ocorreu um erro interno ao processar esse pedido de feedback.`,
+    });
   }
-
-  // let createdFeedback = undefined;
-
-  // // Criar cliente
-  // // Criar feedback
-
-  // createdFeedback = await prisma.feedback.create({
-  //   data: {
-  //     score: 0,
-  //     client: name,
-  //     status: "REQUESTED",
-  //     content: "content",
-  //   },
-  // });
-
-  if (whatsapp) {
-    console.log(
-      `Enviando pedido de feedback do serviço ${service} para cliente ${name} via WhatsApp ${whatsapp}`
-    );
-  }
-
-  if (email) {
-    console.log(
-      `Enviando pedido de feedback do serviço ${service} para cliente ${name} via E-mail ${email}`
-    );
-  }
-
-  return res.json({ message: "Pedido de feedback enviado!" });
 }
 
 export default validate(newFeedback, handler);
