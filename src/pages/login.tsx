@@ -4,11 +4,14 @@ import { NextPage } from "next";
 
 const LoginPage: NextPage = () => {
   return (
-    <PageWrapper>
+    <>
+    <title>Fazer login</title>
+      <PageWrapper>
       <PageContainer>
         <LoginForm />
       </PageContainer>
     </PageWrapper>
+    </>
   );
 };
 

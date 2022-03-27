@@ -37,9 +37,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
       },
     });
 
-    return res
-      .status(200)
-      .json({ message: `Company ${createdCompany.name} was created!` });
+    return res.status(200).json({
+      message: `Company ${createdCompany.name} was created with id ${createdCompany.id}!`,
+    });
   } catch (err: any) {
     console.log(err);
 
