@@ -18,6 +18,7 @@ model Company {
   logoUrl String
   name    String
   services Service[]
+  feedbacks Feedback[]
   attendants Attendant[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -49,11 +50,13 @@ enum FeedbackStatus {
 }
 
 model Feedback {
-  id        Int      @id @default(autoincrement())
+  id        String      @id @default(uuid())
   score     Int
   content   String?
   name    String
   whatsapp String
+  company  Company @relation(fields: [companyId], references: [id])
+  companyId  Int
   status    FeedbackStatus @default(REQUESTED)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
