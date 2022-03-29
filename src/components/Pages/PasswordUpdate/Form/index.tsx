@@ -74,7 +74,7 @@ const PasswordRecoverForm: React.FC = () => {
           />
           <ErrorMessage name="passwordConfirm" component="span" />
 
-          <button type="submit">{loading ? <Spinner /> : "Enviar e-mail de recuperação"}</button>
+          <button type="submit">{loading ? <Spinner /> : "confirmar"}</button>
         </Form>
       </Formik>
     </Container>
