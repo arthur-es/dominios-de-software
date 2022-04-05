@@ -5,14 +5,15 @@ import {
 	getStatusCode,
 } from 'http-status-codes';
 
-describe('testing login function', () => {
+describe('testing register function', () => {
   test('handler function', () => {
     let todo = {
-            email:"felipelagares@discente.ufg.br" ,
-            password: "123456"            
+          email: "felipe.g.lagares@gmail.com",
+          name: "felipe3",
+          password: "012345"           
             };
 
-    const req = fetch('http://localhost:3000/api/auth/login', 
+    const req = fetch('http://localhost:3000/api/user/create', 
         {
           method: 'POST',
           body: JSON.stringify(todo)
@@ -24,11 +25,12 @@ describe('testing login function', () => {
 
   test('handler function', () => {
     let todo = {
-          email:"felipelagares@discente.ufg.br" ,
-          password: "123"            
+          email: "felipe.g.lagares@gmail.com",
+          name: "felipe3",
+          password: "012345"            
           };
 
-    const req = fetch('http://localhost:3000/api/auth/login', 
+    const req = fetch('http://localhost:3000/api/user/create', 
       {
         method: 'POST',
         body: JSON.stringify(todo)
