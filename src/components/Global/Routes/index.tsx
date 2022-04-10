@@ -13,7 +13,9 @@ const Routes: React.FC<IProps> = ({ authenticated, children }) => {
   const { status, currentUser, setStatus } = useUser();
   const { push } = useRouter();
 
-  // if (status === STATUS.IDLE) return <Spinner />;
+  if (status === STATUS.IDLE) return <Spinner />;
+
+  console.log(status, authenticated);
 
   if (!authenticated) {
     switch (status) {

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
+import Spinner from "@/utils/Spinner";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -12,6 +13,8 @@ const Home: NextPage = () => {
       const token = query[0].split("=")[1];
 
       router.push("/password-update", { query: { token } });
+    } else {
+      router.push("/dashboard");
     }
   }, [router]);
 
@@ -27,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Welcome to WP Track!</h1>
+        <Spinner />
       </main>
     </div>
   );
