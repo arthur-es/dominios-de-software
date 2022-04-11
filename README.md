@@ -37,7 +37,7 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 #### Requisitos:
 
 1. Eu, como recepcionista, preciso entrar no sistema com meus dados de login, para poder começar a enviar os pedidos de feedback.
-2. Eu, como recepcionista, preciso registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue através do e-mail ou WhatsApp dele.
+2. Eu, como recepcionista, preciso registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue por meio de seu WhatsApp.
 3. Eu, como cliente, gostaria de clicar no link do pedido de feedback para registrar meu nível de satisfação com o serviço prestado pela empresa.
 
 #### Protótipos
