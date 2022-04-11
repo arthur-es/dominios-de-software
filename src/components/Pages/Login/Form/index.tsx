@@ -26,7 +26,9 @@ const LoginForm: React.FC = () => {
     password: yup.string().required("Entre com uma senha."),
   });
 
-  const { setCurrentUser, setStatus } = useUser();
+  const { setCurrentUser, setStatus, status } = useUser();
+
+  console.log(status);
 
   const onSubmit = async (data: IData) => {
     try {

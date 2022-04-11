@@ -16,14 +16,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Toast />
 
-      {/* <Routes
+      <Routes
         authenticated={
-          !router.pathname.includes("/login") ||
-          !router.pathname.includes("/registro")
+          !router.pathname.includes("/login") &&
+          !router.pathname.includes("/registro") &&
+          !router.pathname.includes("/password-recover") &&
+          !(router.pathname === "/")
         }
-      > */}
-      <Component {...pageProps} />
-      {/* </Routes> */}
+      >
+        <Component {...pageProps} />
+      </Routes>
     </UserProvider>
   );
 }
