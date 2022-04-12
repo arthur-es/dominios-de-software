@@ -15,3 +15,5 @@ export const supabaseKey = process.env.SUPABASE_KEY;
 
 export const sacflowEndpoint = process.env.SACFLOW_ENDPOINT;
 export const sacflowToken = process.env.SACFLOW_TOKEN;
+
+export const SITE_URL = "https://wptrack.vercel.app";

@@ -1,3 +1,4 @@
+import SEO from "@/components/Global/SEO";
 import PasswordRecoverForm from "@/components/Pages/PasswordRecover/Form";
 import { PageWrapper, PageContainer } from "@/styles/Pages/login";
 import { NextPage } from "next";
@@ -5,12 +6,15 @@ import { NextPage } from "next";
 const RecoverPasswordPage: NextPage = () => {
   return (
     <>
-    <title>Recuperar senha</title>
-    <PageWrapper>
-      <PageContainer>
-        <PasswordRecoverForm />
-      </PageContainer>
-    </PageWrapper>
+      <SEO
+        title="Recuperar senha"
+        description="Recupere sua senha do WPTrack"
+      />
+      <PageWrapper>
+        <PageContainer>
+          <PasswordRecoverForm />
+        </PageContainer>
+      </PageWrapper>
     </>
   );
 };
