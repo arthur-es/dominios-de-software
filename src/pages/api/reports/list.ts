@@ -24,7 +24,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     let scoreSum = 0;
 
     foundFeedbacks.forEach((feedback) => {
-      scoreSum += feedback.score;
+      if (feedback.score !== 0) {
+        scoreSum += feedback.score;
+      }
     });
 
     const feedbackAmount = foundFeedbacks.length;
