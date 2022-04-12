@@ -7,4 +7,16 @@ export const newFeedback = object({
   name: string().required().min(3),
 });
 
+export const listFeedback = object({
+  companyId: number().required().positive().integer(),
+});
+
+export const registerFeedback = object({
+  id: string().required(),
+  content: string().optional(),
+  score: number().required().positive().integer(),
+});
+
 export type NewFeedbackOnWhatsApp = TypeOf<typeof newFeedback>;
+export type ListAllFeedbacks = TypeOf<typeof listFeedback>;
+export type RegisterFeedback = TypeOf<typeof registerFeedback>;

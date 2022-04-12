@@ -11,4 +11,12 @@ export const companySchema = object({
     .matches(new RegExp("^[a-z](-?[a-z])*$"), "Slug it not in correct format"),
 });
 
+export const listCompanySchema = object({
+  slug: string()
+    .required()
+    .trim()
+    .matches(new RegExp("^[a-z](-?[a-z])*$"), "Slug it not in correct format"),
+});
+
 export type Company = TypeOf<typeof companySchema>;
+export type ListCompany = TypeOf<typeof listCompanySchema>;
