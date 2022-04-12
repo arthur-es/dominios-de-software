@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <title>WP Track</title>
         <meta
           name="description"
-          content="Receber feedback de um serviço no WhatsApp nunca foi tão fácil!"
+          content="Receber feedback de um serviço no WhatsApp ou e-mail nunca foi tão fácil!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
