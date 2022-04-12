@@ -15,7 +15,7 @@ model Company {
   slug    String   @unique
   email   String
   whatsapp   String
-  logoUrl String
+  logoUrl String?
   name    String
   services Service[]
   feedbacks Feedback[]
