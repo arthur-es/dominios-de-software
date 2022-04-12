@@ -40,6 +40,10 @@ Esse grupo de estudantes acreditam que vários benefícios poderiam ser obtidos 
 2. Eu, como recepcionista, preciso registrar o nome e número de telefone com WhatsApp do cliente, para que o pedido de feedback seja entregue por meio de seu WhatsApp.
 3. Eu, como cliente, gostaria de clicar no link do pedido de feedback para registrar meu nível de satisfação com o serviço prestado pela empresa.
 
+## TRELLO
+
+https://trello.com/invite/b/LSMOPLQc/cbbf418433390bd27679ce1f191096d7/wp-track
+
 #### Protótipos
 
 **App do agente**: Leia o QRCode em um celular para abrir o web app.
