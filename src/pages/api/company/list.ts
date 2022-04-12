@@ -17,8 +17,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
       where: { email: parsedEmail },
     });
 
-    console.log(foundCompany);
-
     return res.status(200).json(foundCompany);
   } catch (err: any) {
     console.log(err);
