@@ -22,14 +22,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     let scoreSum = 0;
+    let feedbackAmount = 0;
 
     foundFeedbacks.forEach((feedback) => {
       if (feedback.score !== 0) {
         scoreSum += feedback.score;
+        feedbackAmount += 1;
       }
     });
 
-    const feedbackAmount = foundFeedbacks.length;
     const csat = scoreSum / feedbackAmount;
 
     return res.json({
