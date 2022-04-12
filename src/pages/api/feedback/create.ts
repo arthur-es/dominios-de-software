@@ -39,7 +39,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       phone: whatsapp,
     });
 
-    return res.json({ message: `Pedido de feedback enviado para ${name}!` });
+    return res.json({
+      message: `Pedido de feedback enviado para ${name}!`,
+      feedbackId,
+    });
   } catch (err: any) {
     return res.status(500).json({
       message: `Ocorreu um erro interno ao processar esse pedido de feedback.`,
