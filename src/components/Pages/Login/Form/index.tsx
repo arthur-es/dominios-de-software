@@ -36,11 +36,6 @@ const LoginForm: React.FC = () => {
         password: data.password,
       });
 
-      toast("Usuário logado!", {
-        progressClassName: "progress-confirmation",
-        className: "toaster-confirmation",
-      });
-
       setCurrentUser(response);
       setStatus(STATUS.CONNECTED);
     } catch (err: any) {
