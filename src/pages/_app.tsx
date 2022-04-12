@@ -21,8 +21,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           !router.pathname.includes("/login") &&
           !router.pathname.includes("/registro") &&
           !router.pathname.includes("/password-recover") &&
+          !router.pathname.includes("/password-update") &&
           !(router.pathname === "/")
         }
+        any={router.pathname.includes("/feedback")}
       >
         <Component {...pageProps} />
       </Routes>

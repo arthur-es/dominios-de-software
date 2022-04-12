@@ -28,8 +28,6 @@ const LoginForm: React.FC = () => {
 
   const { setCurrentUser, setStatus, status } = useUser();
 
-  console.log(status);
-
   const onSubmit = async (data: IData) => {
     try {
       setLoading(true);

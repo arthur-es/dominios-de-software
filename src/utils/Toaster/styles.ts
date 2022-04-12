@@ -4,6 +4,7 @@ export const Toaster = styled.div`
   .toaster-default {
     background: #150d21;
     color: white;
+    z-index: 30;
     &:not(:last-child) {
       margin-bottom: 20px;
     }

@@ -21,6 +21,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.json(foundFeedbacks);
   } catch (err: any) {
+    console.log(err);
+
     return res.status(500).json({
       message: `Ocorreu um erro interno ao processar esse pedido de feedback.`,
     });

@@ -23,7 +23,7 @@ const spin = keyframes`
 export const FormModalContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.95);
   overflow: hidden;
   position: fixed;
   display: flex;

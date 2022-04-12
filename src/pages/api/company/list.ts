@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { validate } from "../../../backend/middleware/validade";
-import { companySchema } from "../../../backend/schemas/company";
+import { listCompanySchema } from "../../../backend/schemas/company";
 
 import { PrismaInstance } from "../../../backend/database";
 
 const prisma = PrismaInstance.getInstance();
 
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
-  const { email } = req.query;
+  const { email } = req.body;
 
   const parsedEmail = email.toString();
 
@@ -25,4 +25,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   }
 }
 
-export default validate(companySchema, handler);
+export default handler;

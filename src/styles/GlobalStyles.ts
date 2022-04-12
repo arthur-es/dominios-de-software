@@ -31,4 +31,8 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .Toastify{
+    z-index: 100;
+  }
 `;
