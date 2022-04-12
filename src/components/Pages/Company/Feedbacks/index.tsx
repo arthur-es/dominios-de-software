@@ -18,7 +18,7 @@ const Feedbacks: React.FC<IProps> = ({ feedbacks, loading }) => {
         <>
           <button onClick={() => setFormOpen(true)}>Cadastrar feedback</button>
           <Container>
-            {feedbacks.map((feedback: any) => (
+            {feedbacks?.map((feedback: any) => (
               <Feedback key={feedback.id}>
                 <div>
                   <div>
