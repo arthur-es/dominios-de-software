@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -28,7 +38,7 @@ export const Container = styled.div`
   margin-top: 30px;
 `;
 
-export const Company = styled.div`
+export const Company = styled.a`
   width: 100%;
   max-width: max-content;
   padding: 15px 25px;
@@ -73,4 +83,21 @@ export const CreateCompany = styled.button`
     line-height: 20px;
     margin-left: auto;
   }
+`;
+
+export const Spinner = styled.div`
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  border-top: 3px solid #363740;
+  border-bottom: 3px solid #363740;
+  border-left: 3px solid #363740;
+  border-right: 3px solid transparent;
+
+  animation: infinite 0.6s linear ${spin};
+
+  margin-top: 40px;
+  margin-left: 80px;
 `;

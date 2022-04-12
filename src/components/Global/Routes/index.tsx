@@ -7,15 +7,18 @@ import Spinner from "@/utils/Spinner";
 
 interface IProps {
   authenticated?: boolean;
+  any?: boolean;
 }
 
-const Routes: React.FC<IProps> = ({ authenticated, children }) => {
+const Routes: React.FC<IProps> = ({ authenticated, children, any }) => {
   const { status, currentUser, setStatus } = useUser();
   const { push } = useRouter();
 
   if (status === STATUS.IDLE) return <Spinner />;
 
-  console.log(status, authenticated);
+  if (any) {
+    return <>{children}</>;
+  }
 
   if (!authenticated) {
     switch (status) {

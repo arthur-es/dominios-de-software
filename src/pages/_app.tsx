@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           !router.pathname.includes("/password-update") &&
           !(router.pathname === "/")
         }
+        any={router.pathname.includes("/feedback")}
       >
         <Component {...pageProps} />
       </Routes>
