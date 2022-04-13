@@ -13,6 +13,9 @@
 **Curso**: Engenharia de Software<br/>
 **Professor responsável**: Jacson Rodrigues Barbosa
 
+**Link de acesso ao projeto em produção:** [https://wptrack.vercel.app/](https://wptrack.vercel.app/)
+
+
 # Estudo de caso WPTrack
 
 ## Problemática:
